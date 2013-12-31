@@ -14,7 +14,7 @@ logrotate_app 'kafka' do
   path      ['/var/log/kafka/server.out', '/var/log/kafka/server.err']
   frequency 'daily'
   rotate    7
-  options   ['missingok', 'notifempty', 'compress', 'deplaycompress']
+  options   ['missingok', 'notifempty', 'compress', 'delaycompress']
 end
 
 logrotate_app 'kafka-zoo' do
@@ -22,7 +22,7 @@ logrotate_app 'kafka-zoo' do
   path      ['/var/log/kafka/zookeeper.out', '/var/log/kafka/zookeeper.err']
   frequency 'daily'
   rotate    7
-  options   ['missingok', 'notifempty', 'compress', 'deplaycompress']
+  options   ['missingok', 'notifempty', 'compress', 'delaycompress']
 end
 
 #logrotate_app 'stunnel' do
@@ -38,5 +38,5 @@ logrotate_app 'jmxtrans' do
   path      ['/var/log/jmxtrans/jmxtrans.log']
   frequency 'daily'
   rotate    7
-  options   ['missingok', 'notifempty', 'compress', 'deplaycompress']
+  options   ['missingok', 'notifempty', 'compress', 'delaycompress']
 end
